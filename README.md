@@ -59,4 +59,4 @@ I created this tool to help forgetful mobile users who loses access to their ema
 ## Author information ##
 My name is Egil Hansen and you can find more of my stuff here on GitHub or on my personal site http://egilhansen.com.
 
-If you have any suggestions or find a bug, please add submit a new issue to the [issues](issues) page, or even better, for submit a patch.
+If you have any suggestions or find a bug, please add submit a new issue to the [issues](https://github.com/egil/PasswordExpireNotification/issues) page, or even better, for submit a patch.
