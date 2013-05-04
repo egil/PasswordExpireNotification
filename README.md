@@ -5,8 +5,8 @@ I created this tool to help forgetful mobile users who loses access to their ema
 
 ## Download ##
 
-- [PasswordExpireNotification.exe](PasswordExpireNotification.exe) - only a sigle executable needed (32/64 bit)
-- [NotificationTemplate.txt](NotificationTemplate.txt) - a sample template text file.
+- [PasswordExpireNotification.exe](https://github.com/egil/PasswordExpireNotification/raw/master/bin/Release/PasswordExpireNotification.exe) - only a sigle executable needed (32/64 bit)
+- [NotificationTemplate.txt](https://github.com/egil/PasswordExpireNotification/raw/master/NotificationTemplate.txt) - a sample template text file.
 
 ## Requirements ##
 
