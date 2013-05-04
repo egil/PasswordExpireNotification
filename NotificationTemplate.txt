@@ -1,0 +1,8 @@
+﻿Dear {Name},
+
+Your password will expire in {DaysLeft} day(s) and {HoursLeft} hour(s) or {TotalHoursLeft} hour(s).
+
+Please take measures to change it with before the end of this period; otherwise, you will not be able to login to VPN or Email.
+
+Best regards,
+Your friendly Administrator
