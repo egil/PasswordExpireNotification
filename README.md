@@ -46,15 +46,15 @@ I created this tool to help forgetful mobile users who loses access to their ema
 
 **For testing:**
 
-`PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours"` **`-te:"administrator@example.com"`**
+PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours" **-te:"administrator@example.com"**
 
 **For production with custom subject:**
 
-`PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours"`
+PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours"
 
 **For production:**
 
-`PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk`
+PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk
 
 ## Author information ##
 My name is Egil Hansen and you can find more of my stuff here on GitHub or on my personal site http://egilhansen.com.
