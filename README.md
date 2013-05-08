@@ -24,8 +24,6 @@ I created this tool to help forgetful mobile users who loses access to their ema
  - Sid: The identity is a Security Identifier (SID) in Security Descriptor Definition Language (SDDL) format.
  - Guid: The identity is a Globally Unique Identifier (GUID).
 
-`-max-password-age` or `-mpa`: The maximum password age of the domain.
-
 `-notification-days` or `-nd`: The number of days before expiration to start notifying users.
 
 `-message-template` or `-mt`: The path to the e-mail template text file used when sending out notifications. Path can be either relative or absolute.
@@ -42,19 +40,27 @@ I created this tool to help forgetful mobile users who loses access to their ema
 
 `-test-email` or `te`: [Optional] Send all mails to the specified email address instead. Useful when testing templates, so you do not bother your users.
 
+`-max-password-age` or `-mpa`: [Optional] Override the domains maximum password age. Useful for testing.
+
 ### Example: ###
 
 **For testing:**
 
-PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours" **-te:"administrator@example.com"**
+```
+PasswordExpireNotification.exe -g:"Password Expire Notification" -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours" **-te:"administrator@example.com" -mpa:120**
+```
 
 **For production with custom subject:**
 
-PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours"
+```
+PasswordExpireNotification.exe -g:"Password Expire Notification" -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours"
+```
 
 **For production:**
 
-PasswordExpireNotification.exe -g:"Password Expire Notification" -mpa:120 -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk
+```
+PasswordExpireNotification.exe -g:"Password Expire Notification" -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk
+```
 
 ## Author information ##
 My name is Egil Hansen and you can find more of my stuff here on GitHub or on my personal site http://egilhansen.com.
