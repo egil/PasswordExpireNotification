@@ -28,7 +28,7 @@ I created this tool to help forgetful mobile users who loses access to their ema
 
 `-message-template` or `-mt`: The path to the e-mail template text file used when sending out notifications. Path can be either relative or absolute.
 
-*Replacement patterns that can be used in the template are: `{DaysLeft}`, `{HoursLeft}` and `{TotalHoursLeft}`.*
+> Replacement patterns that can be used in the template are: `{DaysLeft}`, `{HoursLeft}` and `{TotalHoursLeft}`.
 
 `-email-server` or `-es`: The email server name, either as an IP or hostname.
 
@@ -36,7 +36,9 @@ I created this tool to help forgetful mobile users who loses access to their ema
 
 `-subject` or `-s`: [Optional] The subject of the email. Default is *Your password is about to expire!*
 
-*Replacement patterns that can be used in the subject are: `{DaysLeft}`, `{HoursLeft}` and `{TotalHoursLeft}`.*
+> Replacement patterns that can be used in the subject are: `{DaysLeft}`, `{HoursLeft}` and `{TotalHoursLeft}`.
+
+`-bcc-email` or `bcc`: [Optional] Set the specified email adresse as BCC to all outgoing emails.
 
 `-test-email` or `te`: [Optional] Send all mails to the specified email address instead. Useful when testing templates, so you do not bother your users.
 
@@ -47,7 +49,7 @@ I created this tool to help forgetful mobile users who loses access to their ema
 **For testing:**
 
 ```
-PasswordExpireNotification.exe -g:"Password Expire Notification" -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours" -te:"administrator@example.com" -mpa:120
+PasswordExpireNotification.exe -g:"Password Expire Notification" -nd:2 -mt:"NotificationTemplate.txt" -es:mx.example.com -se:administrator@example.dk -s:"Your password will expire in {TotalHoursLeft} hours" -te:"administrator@example.com" -mpa:120 -bcc:"administrator@example.com"
 ```
 
 **For production with custom subject:**

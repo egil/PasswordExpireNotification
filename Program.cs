@@ -24,6 +24,7 @@ namespace Assimilated.PasswordExpireNotification
         private static string _se;
         private static string _subject;
         private static string _testEmail;
+        private static string _bccMail;
 
         internal class UserInfo
         {
@@ -54,9 +55,13 @@ namespace Assimilated.PasswordExpireNotification
             Console.WriteLine("  Message template: {0}", _mtf.FullName);
             Console.WriteLine("  Sender email: {0}", _se);
             Console.WriteLine("  Email server: {0}", _es);
+            if (!string.IsNullOrEmpty(_bccMail))
+            {
+                Console.WriteLine("  BCC email: {0}", _bccMail);
+            }
             if (!string.IsNullOrEmpty(_testEmail))
             {
-                Console.WriteLine("  Test Email: {0}", _testEmail);
+                Console.WriteLine("  Test email: {0}", _testEmail);
             }
             Console.WriteLine("  Date and time: {0}{1}", today, Environment.NewLine);
 
@@ -136,6 +141,11 @@ namespace Assimilated.PasswordExpireNotification
 
             using (var message = new MailMessage(_se, userInfo.EmailAddress, subject, body))
             {
+                if (!string.IsNullOrEmpty(_bccMail))
+                {
+                    message.Bcc.Add(_bccMail);
+                }
+
                 var client = new SmtpClient(_es);
                 try
                 {
@@ -256,6 +266,9 @@ namespace Assimilated.PasswordExpireNotification
 
             // force all emails to specific address
             _testEmail = arguments["test-email"] ?? arguments["te"];
+
+            // get the optional BCC email
+            _bccMail = arguments["bcc-email"] ?? arguments["bcc"];
 
             _mtf = new FileInfo(mt);
         }
